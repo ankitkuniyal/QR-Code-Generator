@@ -8,30 +8,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
+
 .container {
   width: 400px;
+  max-width: 90%; /* Ensures responsiveness on smaller screens */
   padding: 35px;
   border-radius: 20px;
-  margin-top: 200px;
+  margin-top: 100px; /* Adjusted for better alignment on small screens */
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .container p {
   font-size: 28px;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 15px; /* Added some extra spacing for better readability */
+  text-align: center;
 }
+
 .container input {
   width: 100%;
   outline: 0;
   height: 50px;
   padding: 10px;
-  margin: 10px 0px 25px;
+  margin: 10px 0 25px;
   border-radius: 10px;
   border: 1px solid #494eea;
   font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
+
+.container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .container button {
   width: 100%;
   height: 50px;
@@ -43,10 +57,67 @@ body {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   font-weight: 500;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-.imgBox{
-    text-align: center;
-    margin: 0 0 1rem 0;
-    display: none;
-   
+
+.container button:hover {
+  background-color: #43a047;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.imgBox {
+  text-align: center;
+  margin: 20px 0;
+  display: none;
+}
+
+.imgBox img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+    margin-top: 80px; /* Reduced margin for better alignment */
+  }
+
+  .container p {
+    font-size: 24px;
+  }
+
+  .container input,
+  .container button {
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .imgBox img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+    margin-top: 50px; /* Further reduced for small screens */
+  }
+
+  .container p {
+    font-size: 20px;
+  }
+
+  .container input,
+  .container button {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .imgBox img {
+    width: 100px;
+    height: 100px;
+  }
 }
