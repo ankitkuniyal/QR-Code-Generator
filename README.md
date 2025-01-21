@@ -8,7 +8,7 @@ A simple web-based application that generates QR codes from text or URLs. This p
 - Responsive and lightweight design.
 
 ## Live Demo
-You can try the application live here: [QR Code Generator](#) *(Replace with actual URL if deployed)*
+You can try the application live here: https://qr-code-generator-six-rosy.vercel.app
 
 ## Installation
 
